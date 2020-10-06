@@ -12,7 +12,8 @@ if not os.path.exists("html_files"):
 	os.mkdir("html_files")
 
 
-for i in range(10):
+for i in range(20):
+	# number in range() is the amount of observations.
 	current_time_stamp = datetime.datetime.fromtimestamp(time.time()).strftime("%Y%m%d%H%M%S")
 	# strftime makes it a string from time
 	# %Y%m%d%H%M%S is year, month, date, hour, minute, second. it gives the format for the time stamp.
@@ -30,7 +31,7 @@ for i in range(10):
 	f.write(html)
 	f.close()
 	# makes the file
-	time.sleep(20)
+	time.sleep(140)
 	# irl, don't do it for only 10 seconds. it should be like at least 60 (every minute) or so.
 	# also, this doesn't download exactly 10 seconds apart. downloading takes time. so this isn't the method we should use for exact time gaps.
 	# want to download it multiple times, like maybe once an hour.
